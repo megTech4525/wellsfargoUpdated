@@ -1,0 +1,95 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+}
+
+.dashboard-user{
+    position: relative;
+    top: 100px;
+    margin-right: auto;
+    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+        
+ }
+ .user-description{
+   position: relative;
+   margin-right: auto;
+   margin-left: auto;
+    
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    width: 650px;
+    height: 660px;
+    
+    
+ }
+ .user-description img{
+    position: relative;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    
+ }
+ .user-description h1{
+    font-size: 20px;
+
+    
+ }
+ /* .sidebar a:hover{
+    cursor: pointer;
+ } */
+ .dashboard-user input{
+    display: none;
+}
+.dashboard-user table{
+    position: relative;
+    top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    height: 470px;
+    width: 600px;
+    font-weight: 700;
+    background-color: rgba(244, 242, 242, 0.628) ;
+    border-radius: 10px;
+
+}
+
+.dashboard-user table tr{
+    margin: 30px;
+}
+.Edit{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    padding: 12px;
+    right: 20px;
+    bottom: 50em;
+    font-size: 12px;
+    
+ }
+ .Edit #Edit{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: blue;
+    color: white;
+ }
+ .Edit #Edit:hover{
+    cursor: pointer;
+ }
+ .support{
+   position: fixed;
+   right: 0px;
+   bottom: 0px;
+}
+.support img{
+   width: 80px;
+   height:90px;
+   cursor: pointer;
+}

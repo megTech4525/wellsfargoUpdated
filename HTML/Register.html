@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreign Bank Registration & Login</title>
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            top: 120px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #phone{
+            width: 360px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 15px;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <!-- BANK NAME EMBEDED IN THE HEADER DIV -->
+    
+                <div class="header">
+                <h1>WellsFargo Banking</h1>
+            </div>
+
+            <div class="form-container">        
+        <!-- Registration Form -->
+        <form action="http://localhost/test.php" method="POST" id="registrationForm" class="form">
+            
+            <h2>Register</h2>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option> -->
+                    <!-- Countries will be dynamically populated via JavaScript -->
+                <!-- </select>
+            </div>
+             -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword"> Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Address:</label>
+                <input type="Address" id="Address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Postal Code">Postal Code:</label>
+                <input type="text" id="Postal Code" name="postalCode" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="Occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Login Form -->
+        <form action="/PHP/wellsfargo.php" method="POST" id="loginForm" class="form hidden">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+
+            
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="toggle-link" id="toggleLink">Already have an account? Login</div>
+    </div>
+
+    <script>
+        const registrationForm = document.getElementById('registrationForm');
+        const loginForm = document.getElementById('loginForm');
+        const toggleLink = document.getElementById('toggleLink');
+
+        toggleLink.addEventListener('click', () => {
+            registrationForm.classList.toggle('hidden');
+            loginForm.classList.toggle('hidden');
+            toggleLink.textContent = registrationForm.classList.contains('hidden')
+                ? 'Don\'t have an account? Register'
+                : 'Already have an account? Login';
+        });
+
+
+         // Populate the country dropdown with all countries
+    const countrySelect = document.getElementById('country');
+    const countries = new Intl.DisplayNames(['en'], { type: 'region' });
+
+    const countryCodes = Object.keys(countries.of)
+        .map(code => ({ code, name: countries.of(code) }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+    countryCodes.forEach(({ code, name }) => {
+        const option = document.createElement('option');
+        option.value = code;
+        option.textContent = name;
+        countrySelect.appendChild(option);
+    });
+
+    // Initialize Intl-Tel-Input for phone input
+    const phoneInput = document.getElementById('phone');
+    intlTelInput(phoneInput, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+        initialCountry: "auto",
+        geoIpLookup: function (callback) {
+            fetch('https://ipinfo.io/json?token=') // Replace with your token from ipinfo.io
+                .then((response) => response.json())
+                .then((data) => callback(data.country))
+                .catch(() => callback("us"));
+        }
+    });
+    </script>
+</body>
+</html>

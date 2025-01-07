@@ -1,0 +1,278 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+}
+body{
+    background-color: rgb(228, 230, 235);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* .container{
+    position: relative;
+} */
+.header{
+    background-color:  rgb(29, 38, 67);
+    border: 1px solid;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    
+    z-index: 4;
+}
+
+.header h1{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    left: 90px;
+    margin: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+      
+
+}
+
+.sidecontainer{
+    height: 150vh;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 2px 0px 2px white;
+    position: absolute;
+    top: 60px;
+    margin: 40px;
+    color: black;   
+ 
+ }
+
+ .sidecontainer input{
+    display: none;
+}
+
+
+/* .fa-bolt{
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: -15px;
+    background: linear-gradient(red, blue);
+} */
+
+/* h1{
+    position: relative;
+    top: -10px;
+} */
+
+
+ .container a{
+     line-height: 60px;
+     position: relative;
+     top: 30px;
+     font-size: 20px;
+     margin-left: 20px;
+     /* color: white; */
+     text-decoration: none;
+     font-size: 16px;
+ }
+ .fa{
+     font-size: 20px;
+     padding: 10px;
+     color: blue;
+ }
+ .container img{
+     border-radius: 50%;
+     height: 120px;
+     width: 130px;
+     position: relative;
+     display: flex;
+     margin-right: auto;
+     margin-left: auto;
+     top: 20px;
+     padding: 10px; 
+     
+ }
+ .img img:hover{
+    color: rgba(57, 57, 58, 0.779);
+    cursor: pointer;
+ }
+ .img-text h3{
+     /* color: white; */
+     font-size: 15px;
+     text-align: center;
+     position: relative;
+     top: 20px;
+ }
+ .fa-refresh:active{
+     animation: animate 3s;
+ }
+ @keyframes animate{
+     
+    25%{
+        transform: rotate(300deg);
+    }
+     50%{
+         transform: rotate(200deg);
+     }
+     100%{
+         transform: rotate(100deg);
+     }
+
+ }
+ 
+ 
+ .sidebar a img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+ }
+ .dashboard{
+    position: relative;
+    margin-top: 100px;
+    margin-left: 22em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+ }
+ .account-description{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    width: 824px;
+    height: 240px;
+    
+ }
+ .account-description h1{
+    font-size: 20px;
+
+    
+ }
+ .transaction-history{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    
+    right: 20px;
+    bottom: 16em;
+    font-size: 12px;
+ }
+ .transaction-history a{
+ font-size: 12px;
+ }
+ .account-description h3{
+    font-size: 15px;
+    opacity: 0.4;
+ }
+
+ .account-description h1, h3, #account-number{
+    
+    line-height: 30px;
+ }
+#routing-number{
+    position: relative;
+    top: 50px;
+}
+.account-balance{
+    position: relative;
+    top: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    width: 400px;
+    height: 90px;
+}
+.account-balance h3{
+    font-size: 14px;
+    opacity: 0.4;
+ }
+ #available-balance{
+    font-weight: 800;
+ }
+
+ .current-balance{
+    position: absolute;
+    top: 16.1em;
+    right: 0px;    
+    left:27em;
+    bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    width: 400px;
+    height: 90px;
+}
+.current-balance h3{
+    font-size: 14px;
+    opacity: 0.4;
+}
+.completed-transaction{
+    position: relative;
+    top: 40px;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    border-bottom-color: green;
+    padding: 15px;
+    background-color: white;
+    width: 260px;
+    height: 90px;
+}
+.completed-transaction h3{
+    opacity: 0.4;
+    font-size: 14px;
+}
+
+.pending-transaction{
+    position: relative;
+    
+    left: 18em;
+    bottom: 47px;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    border-bottom-color: #ffea00;
+    padding: 15px;
+    background-color: white;
+    width: 260px;
+    height: 90px;
+}
+
+.pending-transaction h3{
+    opacity: 0.4;
+    font-size: 14px;
+}
+
+.failed-transaction{
+    position: relative;
+    
+    left: 36em;
+    bottom: 136px;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    border-bottom-color: #ff1100;
+    padding: 15px;
+    background-color: white;
+    width: 260px;
+    height: 90px;
+}
+.failed-transaction h3{
+    opacity: 0.4;
+    font-size: 14px;
+}
+.support{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+.support img{
+    width: 80px;
+    height:90px;
+    cursor: pointer;
+}

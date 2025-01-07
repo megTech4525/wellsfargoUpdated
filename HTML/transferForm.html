@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <link rel="stylesheet" href="../CSS/transferForm.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==
+    "crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><a href="../index.html">WellsFargo Banking</a></h1>
+        </div>
+
+        <div class="form-body">
+        <h1>Send Money</h1>
+
+        <!-- Buttons to Switch Between Forms -->
+        <div class="button-group">
+            <button id="localTransferBtn" class="active">Inter Bank Transfer</button>
+            <button id="foreignTransferBtn">Domestic Transfer</button>
+            <button id="wireTransferBtn">Wire Transfer</button>
+            <button id="foreignTransferBtn">Crypto Currency</button>
+            <button id="foreignTransferBtn">World Trust Bank Tag</button>
+        </div>
+
+        <!-- Local Transfer Form -->
+        <form id="localTransferForm" class="transfer-form">
+            <h2>Local Transfer</h2>
+            <label for="localAccountNumber">Recipient Account Number:</label>
+            <input type="text" id="localAccountNumber" maxlength="10" pattern="\d{10}"  placeholder="Enter account number" required>
+
+            <label for="localAmount">Amount:</label>
+            <input type="number" id="localAmount" placeholder="Enter amount" required>
+
+            <label for="localPin">4-Digit Transfer Pin:</label>
+            <input type="password" id="localPin" maxlength="4" pattern="\d{4}" placeholder="****" required>
+
+            <button type="submit">Submit Local Transfer</button>
+        </form>
+
+        <!-- Foreign Transfer Form -->
+        <form id="foreignTransferForm" class="transfer-form hidden">
+            <h2>Domestic Transfer</h2>
+            <label for="foreignAccountNumber">Recipient Account:</label>
+            <input type="text" id="foreignAccountNumber" placeholder="Enter IBAN" required>
+
+            <label for="foreignBankName">Account Name:</label>
+            <input type="text" id="foreignBankName" placeholder="Enter bank name" required>
+
+            <label for="localAmount">Enter Banking:</label>
+            <input type="text" id="localAmount" placeholder="Enter Bank" required>
+            
+            <label for="foreignAmount">Amount (in USD):</label>
+            <input type="number" id="foreignAmount" placeholder="Enter amount" required>
+
+            <label for="localAmount">Routing Number:</label>
+            <input type="number" id="localAmount" placeholder="1234564345" required>
+
+            
+            <label for="localAmount">Swift Code</label>
+            <input type="text" id="localAmount" placeholder="KJHGBXXXX" required>
+
+            <label for="localAmount">Account Type:</label>
+            <select>
+                <option value="Savings">Savings Account</option>
+                <option value="Savings">Current Account</option>
+                <option value="Savings">Checking Account</option>
+                <option value="Savings">Fixed Account</option>
+                <option value="Savings">Non-Resident Account</option>
+                <option value="Savings">Online Banking</option>
+                <option value="Savings">Domiciliary Account</option>
+                <option value="Savings">Joint Account</option>
+                
+            </select>
+            <!-- <input type="text" id="localAmount" placeholder="Description" required> -->
+
+            <label for="foreignPin">Select Country:</label>
+            <input type="text" required="required">
+
+            <label for="foreignPin">4-Digit Transfer Pin:</label>
+            <input type="password" id="foreignPin" maxlength="4" pattern="\d{4}" placeholder="****" required>
+
+            <button type="submit">Submit Foreign Transfer</button>
+        </form>
+
+
+        <form id="wireTransferForm" class="transfer-form hidden">
+            <h2>Wire Transfer</h2>
+            <label for="foreignAccountNumber">Recipient Account:</label>
+            <input type="text" id="foreignAccountNumber" placeholder="Enter IBAN" required>
+
+            <label for="foreignBankName">Account Name:</label>
+            <input type="text" id="foreignBankName" placeholder="Enter bank name" required>
+
+            <label for="localAmount">Enter Banking:</label>
+            <input type="text" id="localAmount" placeholder="Enter Bank" required>
+            
+            <label for="foreignAmount">Amount (in USD):</label>
+            <input type="number" id="wireAmount" placeholder="Enter amount" required>
+
+            <label for="localAmount">Routing Number:</label>
+            <input type="number" id="localAmount" placeholder="1234564345" required>
+
+            
+            <label for="localAmount">Swift Code</label>
+            <input type="text" id="localAmount" placeholder="KJHGBXXXX" required>
+
+            <label for="localAmount">Account Type:</label>
+            <select>
+                <option value="Savings">Savings Account</option>
+                <option value="Savings">Current Account</option>
+                <option value="Savings">Checking Account</option>
+                <option value="Savings">Fixed Account</option>
+                <option value="Savings">Non-Resident Account</option>
+                <option value="Savings">Online Banking</option>
+                <option value="Savings">Domiciliary Account</option>
+                <option value="Savings">Joint Account</option>
+            </select>
+            <!-- <input type="text" id="localAmount" placeholder="Description" required> -->
+
+ 
+            <label for="foreignPin">Purpose/Add a Memo:</label>
+            <input type="text" placeholder="Holiday"    required="required">
+
+            <label for="foreignPin">Select Country:</label>
+            <input type="text" required="required">
+
+            <label for="foreignPin">4-Digit Transfer Pin:</label>
+            <input type="password" id="foreignPin" maxlength="4" pattern="\d{4}" placeholder="****" required>
+
+            <button type="submit">Submit Foreign Transfer</button>
+        </form>
+
+    </div>
+
+    <!-- <div id="transactionHistorys">
+        <table>
+            <tr id="transactionHistory"></tr>
+        </table>
+    </div> -->
+
+    <script type="module" src="../JS/loadFunds.js"></script>
+    <script type="module" src="../JS/script.js"></script>
+</body>
+</html>

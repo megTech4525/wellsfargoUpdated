@@ -1,0 +1,194 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.account-setting{
+    position: relative;
+    top: 70px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.account-setting input{
+    display: none;
+}
+
+.settings-features{
+    position: absolute;
+    top:220px;
+    left: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.toggle span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+#toggle-button {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.light-mode {
+    background-color: #f4f4f4;
+    color: black;
+}
+.light-mode .container, 
+/* .light-mode .header, */
+.light-mode .sidecontainer{
+    background-color: #fff;
+    color: black
+
+}
+
+ 
+.toggle{
+background-color: white;
+padding: 10px;
+width: 600px;
+margin-top: 5px;
+border-radius: 10px;
+}
+
+.profileName{
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+   
+   
+}
+
+.profileName #profileSettingsDescription{
+    margin-left: 30px;
+    opacity: 0.3;
+}
+
+ .profileSettings{
+    margin-top: 16px;
+}
+
+.dark-mode .profileName, .dark-mode .statement-section, 
+.dark-mode .referal-section, .dark-mode .contact-section, 
+.dark-mode .securityUpdate, .dark-mode .theme, .dark-mode .toggle,
+.dark-mode #securityUpdateDescription-logout, .dark-mode body{
+    margin-top: 16px;
+    background-color: #1e1e1e;
+    color: white;
+            
+}
+.dark-mode .header, 
+.dark-mode .sidecontainer {
+background-color: #1e1e1e;
+color: blue;
+            
+ }
+
+
+.security{
+    margin-top: 15px;
+}
+.securityUpdate{
+    background-color: white;
+    padding:12px;
+    border-radius: 10px;
+}
+hr{
+    margin-top: 6px;
+}
+
+.updatePassword, .updateTransactionPin, .logout{
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#securityUpdateDescription-logout{
+    width: 120px;
+    padding: 10px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* CONFIRMATION BOX */
+
+/* Styles for the custom confirmation dialog */
+.hidden {
+    display: none;
+}
+
+#custom-confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#confirm-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+#confirm-box p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.confirm-actions button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transit 0.3s;
+}
+
+#confirm-yes {
+    background-color: #28a745;
+    color: white;
+}
+
+#confirm-yes:hover {
+    background-color: #218838;
+}
+
+#confirm-no {
+    background-color: #dc3545;
+    color: white;
+}
+
+#confirm-no:hover {
+    background-color: #c82333;
+}
+
