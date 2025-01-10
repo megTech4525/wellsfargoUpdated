@@ -70,9 +70,11 @@
     text-align: center;
     
  }
- .addmoney-text{
+ .addmoney-text1{
    font-size: 13px;
    width: 70px;
+   position: relative;
+   top: 0px;
  }
  .topUp-text{
    font-size: 14px;
