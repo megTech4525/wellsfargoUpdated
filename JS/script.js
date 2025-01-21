@@ -79,7 +79,7 @@ localTransferForm.addEventListener('submit', (e) => {
     alert(`Withdrawal of $${amountToWithdraw.toLocaleString()} was successful!`);
 
     // Redirect to balance display page
-    window.location.href = '../HTML/Transaction.html';
+    window.location.href = './Transaction.html';
 });
 
 // Handle local withdrawal submission
@@ -119,7 +119,7 @@ foreignTransferForm.addEventListener('submit', (e) => {
     alert(`Withdrawal of $${foreignamountToWithdraw.toLocaleString()} was successful!`);
 
     // Redirect to balance display page
-    window.location.href = '../HTML/Transaction.html';
+    window.location.href = './Transaction.html';
 });
 
 wireTransferForm.addEventListener('submit', (e) => {
@@ -158,7 +158,7 @@ wireTransferForm.addEventListener('submit', (e) => {
     alert(`Withdrawal of $${wireamountToWithdraw.toLocaleString()} was successful!`);
 
     // Redirect to balance display page
-    window.location.href = '../HTML/Transaction.html';
+    window.location.href = './Transaction.html';
 });
 
 

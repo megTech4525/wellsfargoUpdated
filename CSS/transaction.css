@@ -152,7 +152,7 @@ input{
    margin-left: auto;
    display: flex;
    flex-direction: column; 
-    bottom: -23rem;
+    bottom: -35rem;
    transform: translate(-10%,0%);
  }
  .transaction-dashboard #hello-user{
@@ -226,11 +226,17 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -15rem;
-        transform: translate(-10%,0%);
+         bottom: -25rem;
+        transform: translate(-12%,0%);
       }
 }
 @media (max-width:1114px) {
+    #transaction-history{
+        position: relative;
+        left: 7rem;
+        top: -1rem;
+        text-decoration: none;
+     }
     #Profile-image{
         width: 100px;
         border-radius: 50%;
@@ -252,8 +258,8 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -22rem;
-        transform: translate(-10%,0%);
+         bottom: -32rem;
+        transform: translate(-12%,0%);
       }
 }
 @media (max-width:884px) {
@@ -438,7 +444,7 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: 2rem;
+         bottom: -10rem;
         transform: translate(-10%,0%);
       }
       
@@ -456,6 +462,15 @@ td, th{
         color: black;
         transition: all 0.3s ease;
     }
+    .table-responsive{
+        position: absolute;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column; 
+         bottom: -6rem;
+        transform: translate(-10%,0%);
+      }
 }
 @media (max-width:800px) {
     .head-link {
@@ -471,13 +486,13 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: 13rem;
+         bottom: 3rem;
         transform: translate(-10%,0%);
       }
 }
 @media (max-width:768px) {
     body{
-        height: 130vh;
+        height: 140vh;
     }
     .account-balance, .current-balance{
         background-color: white;
@@ -491,14 +506,14 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -5rem;
-        transform: translate(-15%,0%);
+         bottom: -15rem;
+        transform: translate(-12%,0%);
       }
 }
 @media (max-width:430px) {
     body{
         overflow: hidden;
-        height: 180vh;
+        height: 190vh;
      }
      .logos{
         padding: 10px;
@@ -616,8 +631,8 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -25rem;
-        transform: translate(-13%,0%);
+         bottom: -42rem;
+        transform: translate(-14%,0%);
       }
       .table-bordered{
         background-color: aliceblue;
@@ -655,8 +670,8 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -20rem;
-        transform: translate(-13%,0%);
+         bottom: -42rem;
+        transform: translate(-15%,0%);
       }
       .table-bordered{
         background-color: aliceblue;
@@ -699,8 +714,8 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -25rem;
-        transform: translate(-12%,0%);
+        bottom: -42rem;
+        transform: translate(-13%,0%);
       }
     .table-bordered{
         background-color: aliceblue;
@@ -710,14 +725,17 @@ td, th{
      }
 }
 @media (max-width:390px) {
+    body{
+        height: 205vh;
+    }
     .table-responsive{
         position: absolute;
         margin-right: auto;
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -27rem;
-        transform: translate(-12%,0%);
+        bottom: -45rem;
+        transform: translate(-13%,0%);
       }
       .support{
         position: fixed;
@@ -737,8 +755,8 @@ td, th{
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -29rem;
-        transform: translate(-12%,0%);
+        bottom: -48rem;
+        transform: translate(-13%,0%);
       }
       .support{
         position: fixed;
@@ -752,6 +770,9 @@ td, th{
     }
 }
 @media (max-width:360px) {
+    body{
+        height: 215vh;
+    }
     .header{
         display: flex;
         justify-content: center;
@@ -810,13 +831,19 @@ td, th{
     }
 }
 @media (max-width:320px) {
+    body{
+        height: 235vh;
+    }
+    .transaction-dashboard{
+        margin-top: 8rem; 
+     }
     .table-responsive{
         position: absolute;
         margin-right: auto;
         margin-left: auto;
         display: flex;
         flex-direction: column; 
-         bottom: -32rem;
+         bottom: -52rem;
         transform: translate(-12%,0%);
       }
 }

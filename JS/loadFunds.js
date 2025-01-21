@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('initialAmount', Amount)
     
     
-    window.location.href = '../HTML/Register.html'
+    window.location.href = './Register.html'
     // const loadedFunds = localStorage.getItem('initialAmount')
     saveDeposit(Amount)
     // depositedMoney()
