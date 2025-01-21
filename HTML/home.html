@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELLS FARGO(Home)</title>
+    <link rel="stylesheet" href="..//CSS/style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="./CSS/transaction.css" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+       <div class="logos">
+        <img class="logo-png" src="../IMG/F.png" alt="">
+        <h1 class="logo-text">WellsFargo Banking</h1>
+       </div>
+        <div class="img" id="bottom-pics-2">
+            <label for="upload">
+                <img src="../IMG/user-PROFILE.png" alt="click to upload" id="Profile-image" class="class-pics">
+                <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
+            </label>
+            <div class="img-text">
+                <h3 class="client-name">Alexander Joshua</h3>
+            </div>
+        </div>
+    </div>
+    <div class="main-containers">
+        <header>
+            <nav class="nav-link">
+                <div class="main-containers">
+                    <div class="sidecontainer">
+                         <div class="img" id="bottom-pics">
+                            <label for="upload">
+                                <img src="../IMG/user-PROFILE.png" alt="click to upload" id="Profile-image" >
+                                <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
+                            </label>
+                            <div class="img-text">
+                                <h3 class="client-name">Alexander Joshua</h3>
+                            </div>
+                        </div><br>
+                <li class="header-list">
+                    <a class="head-link" href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="link-name">Home</span></a>
+                </li><br>
+    
+                <li class="header-list">
+                    <a class="head-link" href="../HTML/userProfile.html"><i class="fa fa-user-circle" aria hidden="true"></i> <span class="link-name">User <span class="profile">Profile</span></span></a>
+                </li><br>
+    
+                <li class="header-list" id="removal">
+                    <a class="head-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i><span class="link-name">Notifications</span></a>
+                </li><br>
+    
+                <li class="header-list" id="removal">
+                    <a class="head-link" href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="link-name">Customer <span class="profile">Care</span></span></a>
+                </li><br>
+    
+                <li class="header-list">
+                    <a class="head-link" href="../HTML/Transaction.html" id="transfer"><i class="fa fa-download"></i><span class="link-name">Transactions</span></a>
+                </li><br>
+    
+                <li class="header-list">
+                    <a class="head-link" href="../HTML/settings.html" id="transfer"><i class="fa fa-sliders" aria-hidden="true"></i><span class="link-name">Setting</span></a>
+                </li><br>
+                
+                <li class="header-list" id="removal">
+                    <a class="head-link" href="#"><i class="fa fa-refresh" aria-hidden="true"></i><span class="link-name">Refresh</span></a>
+                </li><br>
+                    </div>
+                </nav>
+        </header>
+       
+        <!-- Main Section -->
+         <section class="bank-section">
+            <div class="dashboard">
+                <div class="account-description">
+                    <div class="account-details">
+                        <div class="top-savings">
+                            <h1 class="savings-head">Savings Account</h1>
+                            <div class="transaction-history">
+                                <a href="../HTML/Transaction.html"><span id="transaction-history">Transaction History</span></a>
+                            </div>
+                        </div>
+                       <br>
+    
+                    <h3 class="acct-head">Account Number</h3>
+                    <span id="account-number">3026354706</span><br><br>
+    
+                    <!-- <span id="routing-number">
+                        <h3>Routing Number</h3>
+                        <span id="routing-id">12364726</span>
+                    </span> -->
+                    
+    
+                    
+                       
+                        <div class="transaction-icons">
+                            <div class="addmoney">
+                                <a href="../HTML/addMoney.html"><img src="../IMG/addMoney (1).png" class="trans-icon"></a>
+                                
+                                <div class="topUp-text">
+                                Top Up
+                            </div>
+                                
+                            </div>
+            
+                            <div class="transfermoney">
+                                <a href="../HTML/transferForm.html"><img src="../IMG/transfer-in-out.png" class="trans-icon"></a>
+                                <div class="addmoney-text">
+                                    Transfer 
+                                </div>
+                            </div>
+                                <div class="transfermoney">
+                                    <a href="../HTML/card.html"><img src="../IMG/credit-card.png" class="trans-icon"></a>
+                                    <div class="addmoney-text">
+                                        My Card
+                                    </div>
+                            </div>
+                            <div class="convert">
+                                <img src="../IMG/convert (1).png" class="trans-icon">
+                                <div class="addmoney-text1">
+                                Exchange
+                            </div>
+                                
+                            </div>
+                </div>
+                    </div><br><br>
+    
+    
+               <div class="balances">
+                <div class="account-balance">
+                    <h3 class="balance-head">Available Balance</h3>
+                    <span id="available-balance">&dollar;0.00</span>
+    
+                </div>
+    
+                <div class="current-balance">
+                    <h3 class="balance-head">Current Balance</h3>
+                    <span id="current-balance">&dollar;0.00</span>
+    
+                </div>
+               </div><br><br>
+    
+               <div class="transactions">
+                <div class="completed-transaction">
+                    <h3 class="trans-head">Completed Transaction</h3>
+                    <span id="number-transaction-completed">0</span>
+    
+                </div>
+    
+                <div class="pending-transaction">
+                    <h3 class="trans-head">Pending Transaction</h3>
+                    <span id="number-transaction-pending">0</span>
+    
+                </div>
+    
+                <div class="failed-transaction">
+                    <h3 class="trans-head">Failed Transaction</h3>
+                    <span id="number-transaction-failed">0</span>
+    
+                </div>
+               </div>
+    
+            </div>
+    
+    
+            <div class="support">
+                <img src="../IMG/24-hours-support.png">
+            </div>
+    
+    
+        </div>
+         </section>
+    </div> 
+    <script type="module" src="./JS/loadFunds.js"></script>
+    <!-- <script type="module" src="./JS/script.js"></script> -->
+    <script type="module" src="./JS/transaction.js"></script>
+    <script type="module" src="./JS/index.js"></script>
+    <script type="module" src="./JS/settings.js"></script>
+
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+        })
+    </script>
+     -->
+</body>
+
+</html>

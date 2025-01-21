@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELLS FARGO</title>
+    <link rel="stylesheet" href="../CSS/card.css" type="text/css">
+    <!-- <link rel="stylesheet" href="../CSS/settings.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="./CSS/settings.css" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==
+    "crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- DIV CONTAINER HOUSING ALL THE CONTENT IN THE WEBSITE -->
+        <div class="container">
+
+    <!-- BANK NAME EMBEDED IN THE HEADER DIV -->
+
+    <div class="header">
+        <div class="logos">
+         <img class="logo-png" src="../IMG/F.png" alt="">
+         <h1 class="logo-text">WellsFargo Banking</h1>
+        </div>
+         <div class="img" id="bottom-pics-2">
+             <label for="upload">
+                 <img src="./IMG/user-PROFILE.png" alt="click to upload" id="Profile-image" class="class-pics">
+                 <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
+             </label>
+             <div class="img-text">
+                 <h3 class="client-name">Alexander Joshua</h3>
+             </div>
+         </div>
+     </div>
+    <!-- SIDE BAR DIV AND CONTENTS -->
+
+        <div class="sidecontainer">
+        <div class="img">
+        <label for="upload">
+        <img src="./IMG/user-PROFILE.png" alt="click to upload" id="Profile-image">
+        <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
+        </label>
+        <div class="img-text">
+        <h3>upload picture</h3>
+        <h3>Name</h3>
+    </div>
+    </div>
+        
+    <!-- SIDE BAR FONT ICONS AND NAMING -->
+
+        <div class="sidebar">
+        <a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a><br>
+        <a href="../HTML/userProfile.html"><i class="fa fa-user-circle" aria-hidden="true"></i>User Profile</a><br>
+        <a href="#"><i class="fa fa-bell" aria-hidden="true"></i>Notifications</a><br>
+        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>Customer Care</a><br>
+        <a href="../HTML/Transaction.html" id="transfer"><i class="fa fa-download"></i>Transactions</a><br>
+        <a href="../HTML/settings.html" id="transfer"><i class="fa fa-sliders" aria-hidden="true"></i>Setting</a><br>
+        <a href="#"><i class="fa fa-refresh" aria-hidden="true"></i>Refresh</a><br>
+        
+    </div>
+    </div>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-template">
+            <div class="masterCard-color">
+            <div class="colored">
+            </div>
+            <div class="black">
+            </div>
+        </div>
+
+                <p>Card Number</p>
+                <p id="card-number">XXXX-XXXX-XXXX</p>
+                <div class="expiry-ccv">
+                <p>Expiry</p>                
+                <span>XX/XX</span>
+                <p>CCV</p>
+                <span>XXX</span>
+
+            </div>
+
+            
+    </div>
+
+    
+    <div class="buttons">
+        <button id="request-card">Request Card</button>
+        <button id="need-help">Need Help?</button>
+    </div>
+
+
+    <!-- I COPIED THE DIV I CREATED IN THE SETTINGS SECTION TO MAKE UP THIS ONE -->
+
+    <div class="Card-details">
+        
+        <span id="card-header">Card Details</span>
+        <div class="cardName">
+        <i class="fa fa-user-circle" aria-hidden="true"></i><span id="card-name">XXXXXXXXX</span><br>
+        <span id="nameSettings">Card Name</span>
+        <hr>
+        <div class="cardNumber-section">
+            <i class="fa fa-briefcase" aria-hidden="true"></i><span id="card-number">XXXX-XXXX-XXXX</span><br>
+            <span  id="nameSettings">Card Number</span>
+        </div>
+        <hr>
+        <div class="cardCcv-section">
+            <i class="fa fa-tag" aria-hidden="true"></i><span id="card-ccv">XXX</span><br>
+            <span id= "nameSettings">CCV</span>
+        </div>
+      </div>
+</div>

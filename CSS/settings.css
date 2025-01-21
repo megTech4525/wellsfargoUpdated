@@ -1,141 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-color: rgb(206, 245, 232);
+}
+.logo-png{
+    width: 50px;
+    border-radius: 50%;
+    /* padding: 10px; */
+}
+.logo-text{
+    font-size: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    color: aliceblue;
+}
+.header{
+    background-color:  rgb(29, 38, 67);
+    border: 1px solid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    padding: 10px;
+}
+.nav-link{
+    margin-top: 10rem;
+    background-color: aliceblue;
+    width: 60%;
+    /* padding: 40px; */
+    margin-left: 2rem;
+    border-radius: 30px;
+    line-height: 2rem;
+}
+.header-list{
+    letter-spacing: 3px;
+}
+.head-link:hover{
+  background-color: rgb(95, 95, 190);
+  width: 116%;
+  color: aliceblue;
+}
+.head-link{
+    text-decoration: none;
+    font-family: "Lato";
+    color: rgb(43, 42, 42);
+    font-weight: 700;
+}
+.fa{
+    color: navy;
+}
+.fa-refresh:active{
+    animation: animate 3s;
+}
+@keyframes animate{
+    
+   25%{
+       transform: rotate(300deg);
+   }
+    50%{
+        transform: rotate(200deg);
+    }
+    100%{
+        transform: rotate(100deg);
+    }
 
 }
+#bottom-pics-2{
+  display: none;
+}
+.main-containers{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.header-list {
+    margin-bottom: 10px;
+}
 
-.account-setting{
-    position: relative;
-    top: 70px;
+.head-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.head-link i {
+    margin-right: 10px;
+}
+#Profile-image{
+    width: 100px;
+    border-radius: 50%;
+    height: 120px;
+    width: 130px;
+}
+input{
+    display: none;
+}
+.img{
     display: flex;
-    flex-direction:column;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+.client-name{
+    font-family: "Lato",sans-serif;
+}
+.support{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+.support img{
+    width: 80px;
+    height:90px;
+    cursor: pointer;
+}
+/* Settings Section */
+.setting-features{
+    margin-top: 10rem;  
+    font-family: "Lato", sans-serif;
 }
 .account-setting input{
     display: none;
-}
-
-.settings-features{
-    position: absolute;
-    top:220px;
-    left: 400px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    
-}
-
-.dark-mode {
+  }
+  
+  .dark-mode {
     background-color: #121212;
     color: #fff;
-}
-
-.toggle {
+  }
+  .toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
-}
-.toggle span {
+  }
+  .toggle span {
     font-size: 16px;
     margin-right: 10px;
-}
-#toggle-button {
+  }
+  #toggle-button {
     cursor: pointer;
     font-size: 20px;
-}
-
+  }
+  
 .light-mode {
-    background-color: #f4f4f4;
+    background-color: rgb(206, 245, 232);
     color: black;
-}
-.light-mode .container, 
-/* .light-mode .header, */
-.light-mode .sidecontainer{
-    background-color: #fff;
+  }
+  .light-mode .container, 
+  /* .light-mode .header, */
+  .light-mode .sidecontainer{
+    /* background-color: #fff; */
     color: black
-
-}
-
- 
-.toggle{
-background-color: white;
-padding: 10px;
-width: 600px;
-margin-top: 5px;
-border-radius: 10px;
-}
-
-.profileName{
+  
+  }
+  
+  .toggle{
+  background-color: white;
+  padding: 10px;
+  width: 600px;
+  margin-top: 5px;
+  border-radius: 10px;
+  }
+  .profileName{
     margin-top: 5px;
     background-color: white;
+    width: 80%;
     border-radius: 10px;
     padding: 10px;
    
-   
-}
-
-.profileName #profileSettingsDescription{
+  }
+  .prof-head{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+  }
+  .theme{
+    font-family: "Lato", sans-serif;
+  }
+  .profileName #profileSettingsDescription{
     margin-left: 30px;
     opacity: 0.3;
-}
-
- .profileSettings{
+  }
+  .profileSettings{
     margin-top: 16px;
-}
-
-.dark-mode .profileName, .dark-mode .statement-section, 
-.dark-mode .referal-section, .dark-mode .contact-section, 
-.dark-mode .securityUpdate, .dark-mode .theme, .dark-mode .toggle,
-.dark-mode #securityUpdateDescription-logout, .dark-mode body{
+  }
+  
+  .dark-mode .profileName, .dark-mode .statement-section, 
+  .dark-mode .referal-section, .dark-mode .contact-section, 
+  .dark-mode .securityUpdate, .dark-mode .theme, .dark-mode .toggle,
+  .dark-mode #securityUpdateDescription-logout, .dark-mode body{
     margin-top: 16px;
     background-color: #1e1e1e;
     color: white;
             
-}
-.dark-mode .header, 
+  }
+  .dark-mode .header, 
 .dark-mode .sidecontainer {
 background-color: #1e1e1e;
 color: blue;
-            
- }
+          
+}
 
 
 .security{
-    margin-top: 15px;
+  margin-top: 15px;
 }
 .securityUpdate{
-    background-color: white;
-    padding:12px;
-    border-radius: 10px;
+  background-color: white;
+  padding:12px;
+  border-radius: 10px;
+  width: 80%;
 }
 hr{
     margin-top: 6px;
-}
-
-.updatePassword, .updateTransactionPin, .logout{
+  }
+  
+  .updatePassword, .updateTransactionPin, .logout{
     margin-top: 16px;
     cursor: pointer;
-}
-
-#securityUpdateDescription-logout{
-    width: 120px;
-    padding: 10px;
+  }
+  
+  #securityUpdateDescription-logout{
+    padding: 10px 20px;
     border-radius:10px;
     cursor:pointer;
-}
-
-/* CONFIRMATION BOX */
+    border: none;
+    background-color: rgb(35, 35, 175);
+    color: aliceblue;
+    font-family: "Lato",sans-serif;
+  }
+  .statement-section, .referal-section, .contact-section{
+    padding: 15px;
+  }
+  /* CONFIRMATION BOX */
 
 /* Styles for the custom confirmation dialog */
 .hidden {
     display: none;
-}
-
-#custom-confirm {
+  }
+  
+  #custom-confirm {
     position: fixed;
     top: 0;
     left: 0;
@@ -146,9 +260,8 @@ hr{
     justify-content: center;
     align-items: center;
     z-index: 1000;
-}
-
-#confirm-box {
+  }
+  #confirm-box {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -156,15 +269,14 @@ hr{
     text-align: center;
     max-width: 300px;
     width: 100%;
-}
-
-#confirm-box p {
+  }
+  
+  #confirm-box p {
     margin-bottom: 20px;
     font-size: 16px;
     color: #333;
-}
-
-.confirm-actions button {
+  }
+  .confirm-actions button {
     margin: 0 10px;
     padding: 10px 20px;
     border: none;
@@ -172,23 +284,417 @@ hr{
     font-size: 14px;
     cursor: pointer;
     transition: transit 0.3s;
-}
-
-#confirm-yes {
+  }
+  
+  #confirm-yes {
     background-color: #28a745;
     color: white;
-}
-
-#confirm-yes:hover {
+  }
+  
+  #confirm-yes:hover {
     background-color: #218838;
-}
-
-#confirm-no {
-    background-color: #dc3545;
-    color: white;
+  }
+  #confirm-no {
+  background-color: #dc3545;
+  color: white;
 }
 
 #confirm-no:hover {
-    background-color: #c82333;
+  background-color: #c82333;
+}  
+/* Responsive Design */
+@media (max-width:1280px) {
+  .nav-link{
+      margin-top: 10rem;
+      background-color: aliceblue;
+      width: 67%;
+      /* padding: 40px; */
+      margin-left: 2rem;
+      border-radius: 30px;
+      line-height: 2rem;
+  }
 }
+@media (max-width:1114px) {
+  #Profile-image{
+      width: 100px;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+  }
+}
+@media (max-width:884px) {
+  body{
+     overflow-x: hidden;
+  }
+  .account-details{
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 35px;
+      background-color: white;
+      width: 85%;
+      /* height: 240px; */
+      margin: auto;
+   }
+   .balances{
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 200px;
+      place-content: center;
+      margin-right: 4rem;
+  }
+  .account-balance, .current-balance{
+      background-color: white;
+      width: 150%;
+      border-radius: 15px;
+      padding: 30px;
+  }
+  .transactions{
+      display: grid;
+      grid-template-columns: auto;
+      gap: 10px;
+      position: relative;
+      left: 8.5rem;
+  }
+   .transaction-history{
+      position: relative;
+      left: 10rem;
+      top: -1.5rem;
+      text-decoration: none;
+   }
+   .main-containers{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .header{
+      background-color:  rgb(29, 38, 67);
+      border: 1px solid;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      padding: 10px;
+  }
+ 
+  .nav-link{
+      margin-top: 10rem;
+      background-color: aliceblue;
+      width: 100%;
+      margin-left: 0.2rem;
+      border-radius: 0px;
+      line-height: 2rem;
+      display: grid;
+      place-content: center;
+      position: fixed;
+      bottom: 0;
+      z-index: 5;
+  }
+  .header-list{
+      display: grid;
+      place-content: center;
+  }
+  .sidecontainer{
+      display: flex;
+  }
+  #bottom-pics-2{
+    display: flex;
+}
+#Profile-image{
+    width: 100px;
+    border-radius: 50%;
+    height: 70px;
+    width: 80px;
+}
+.client-name{
+    font-family: "Lato",sans-serif;
+    color: aliceblue;
+    font-size: 14px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    gap :380px;
+    position: fixed;
+    z-index: 5;
+}
+.logos{
+    padding: 15px;
+    line-height: 2rem;
+}
+  #bottom-pics{
+      display: none;
+  }
+  .support{
+      position: fixed;
+      right: 0px;
+      top: 400px;
+  }
+  .support img{
+      width: 80px;
+      height:90px;
+      cursor: pointer;
+  }
+  .profile{
+      display: none;
+  }
+  .head-link{
+      text-decoration: none;
+      font-family: "Lato";
+      color: rgb(43, 42, 42);
+      font-weight: 700;
+      font-size: 15px;
+      display: block;
+  }
+  .head-link:hover{
+      background-color: rgb(95, 95, 190);
+      width: 100%;
+      color: aliceblue;
+    }
+    .setting-features{
+      margin-top: 13rem;  
+      font-family: "Lato", sans-serif;
+      display: grid;
+      place-content: center;
+  }
+  .toggle{
+    background-color: white;
+    padding: 10px;
+    width: 75%;
+    margin-top: 5px;
+    border-radius: 10px;
+    }
+    
+}
+@media (max-width:834px) {
+  .header{
+      display: flex;
+      justify-content: center;
+      gap :300px;
+  }
+}
+@media (max-width:800px) {
+  .head-link {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s ease;
+  }
+}
+@media (max-width:768px) {
+  .account-balance, .current-balance{
+      background-color: white;
+      width: 120%;
+      border-radius: 15px;
+      padding: 30px;
+  }
+}
+@media (max-width:430px) {
+  body{
+    height: 150vh;
+}
+.logos{
+    padding: 10px;
+    line-height: 1.5rem;
+}
+.logo-png{
+    width: 50px;
+    border-radius: 50%;
+    /* padding: 10px; */
+}
+.logo-text{
+    font-size: 12px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    color: aliceblue;
+}
+  #removal{
+    display: none;
+}
+  body{
+    height: 120vh;
 
+  }
+  .setting-features{
+    margin-top: 10rem;  
+    font-family: "Lato", sans-serif;
+    display: grid;
+    place-content: center;
+    margin-left: 3rem;
+}
+  .balances{
+      display: grid;
+      grid-template-columns: auto;
+      gap: 10px;
+  }
+  .transactions{
+      display: grid;
+      grid-template-columns: auto;
+      gap: 10px;
+      position: relative;
+      left: 3.5rem;
+  }
+  .nav-link{
+      margin-top: 10rem;
+      background-color: aliceblue;
+      width: 100%;
+      margin-left: 0.2rem;
+      border-radius: 0px;
+      line-height: 1rem;
+      display: grid;
+      place-content: center;
+      gap: 10px;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    gap :120px;
+    position: fixed;
+    z-index: 5;
+}
+#Profile-image{
+    width: 100px;
+    border-radius: 50%;
+    height: 40px;
+    width: 50px;
+}
+.client-name{
+    font-family: "Lato",sans-serif;
+    color: aliceblue;
+    font-size: 12px;
+}
+  .header-list{
+      letter-spacing: 1px;
+  }
+  .support{
+    position: fixed;
+    right: 0px;
+      top: 600px;
+}
+.support img{
+    width: 60px;
+    height:70px;
+    cursor: pointer;
+}
+}
+@media (max-width:414px) {
+  .header{
+      display: flex;
+      justify-content: center;
+      gap :100px;
+      position: fixed;
+      z-index: 5;
+  }
+}
+@media (max-width:393px) {
+  .addmoney-text, .topUp-text, .addmoney-text1{
+      font-family: "Lato", sans-serif;
+      font-size: 12px;
+  }
+  .nav-link{
+      margin-top: 10rem;
+      background-color: aliceblue;
+      width: 100%;
+      margin-left: 0.2rem;
+      border-radius: 0px;
+      line-height: 1rem;
+      display: grid;
+      place-content: center;
+      gap: 5px;
+  }
+  .head-link{
+      text-decoration: none;
+      font-family: "Lato";
+      color: rgb(43, 42, 42);
+      font-weight: 700;
+      font-size: 13px;
+      display: block;
+  }
+}
+@media (max-width:390px) {
+  body{
+    height: 130vh;
+  }
+}
+@media (max-width:375px) {
+  body{
+    overflow: hidden;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    gap :60px;
+    position: fixed;
+    z-index: 5;
+}
+}
+@media (max-width:360px) {
+  body{
+    height: 135vh;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    gap :90px;
+    position: fixed;
+    z-index: 5;
+}
+.logo-png{
+    width: 30px;
+    border-radius: 50%;
+    /* padding: 10px; */
+}
+.logo-text{
+    font-size: 8px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    color: aliceblue;
+}
+#Profile-image{
+    width: 100px;
+    border-radius: 50%;
+    height: 30px;
+    width: 40px;
+}
+.client-name{
+    font-family: "Lato",sans-serif;
+    color: aliceblue;
+    font-size: 10px;
+}
+  .transaction-history{
+      position: relative;
+      left: 2rem;
+      top: -1.5rem;
+      text-decoration: none;
+   }
+  .addmoney-text, .topUp-text, .addmoney-text1{
+      font-family: "Lato", sans-serif;
+      font-size: 10px;
+  }
+  .head-link {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s ease;
+  }
+  .support{
+    position: fixed;
+    right: 0px;
+      top: 570px;
+}
+.support img{
+    width: 60px;
+    height:70px;
+    cursor: pointer;
+}
+}
+@media (max-width:320px) {
+  body{
+    height: 185vh;
+  }
+  .client-name{
+    font-family: "Lato",sans-serif;
+    color: aliceblue;
+    font-size: 8px;
+}
+}
