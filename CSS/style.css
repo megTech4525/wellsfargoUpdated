@@ -453,7 +453,7 @@ input{
         height: 150vh;
     }
     .logo-text{
-        transform: translate(-5%,120%);
+        transform: translate(0%,10%);
         font-size: 20px;
     }
     .logo-png{
