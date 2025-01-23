@@ -380,20 +380,15 @@ input{
     }
 }
 @media (max-width:430px) {
+    *{
+        overflow-x: hidden;
+    }
     body{
-        height: 130vh;
+        height: 150vh;
     }
-    .logos{
-        padding: 10px;
-        line-height: 1.5rem;
-    }
-    .logo-png{
-        width: 50px;
-        border-radius: 50%;
-        /* padding: 10px; */
-    }
+   
     .logo-text{
-        font-size: 12px;
+        font-size: 28px;
         font-family: "Josefin Sans", sans-serif;
         text-align: center;
         color: aliceblue;
@@ -573,7 +568,7 @@ input{
         /* padding: 10px; */
     }
     .logo-text{
-        font-size: 8px;
+        font-size: 28px;
         font-family: "Josefin Sans", sans-serif;
         text-align: center;
         color: aliceblue;
