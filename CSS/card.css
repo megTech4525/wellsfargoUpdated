@@ -437,7 +437,7 @@ input{
 }
 @media (max-width:768px) {
   body{
-    height: 135vh;
+    height: 155vh;
   }
   .account-balance, .current-balance{
       background-color: white;
