@@ -452,15 +452,7 @@ input{
   margin-top: 11rem; 
 
 }
-.logos{
-    padding: 10px;
-    line-height: 1.5rem;
-}
-.logo-png{
-    width: 50px;
-    border-radius: 50%;
-    /* padding: 10px; */
-}
+
 .logo-text{
     font-size: 28px;
     font-family: "Josefin Sans", sans-serif;
@@ -470,10 +462,6 @@ input{
   #removal{
     display: none;
 }
-  body{
-    height: 120vh;
-
-  }
   .card-template{
     padding: 10px;
     border: 1px solid;
