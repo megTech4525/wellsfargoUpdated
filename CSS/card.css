@@ -446,7 +446,7 @@ input{
 @media (max-width:430px) {
  
   body{
-    height: 140vh;
+    height: 150vh;
 }
 .card-container{
   margin-top: 11rem; 
@@ -576,7 +576,7 @@ input{
 }
 @media (max-width:390px) {
   body{
-    height: 130vh;
+    height: 150vh;
   }
 }
 @media (max-width:375px) {
