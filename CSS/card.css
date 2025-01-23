@@ -493,8 +493,8 @@ input{
     display: flex;
     justify-content: center;
     gap :120px;
-    position: fixed;
-    z-index: 5;
+    /* position: fixed;
+    z-index: 5; */
 }
 #Profile-image{
     width: 100px;
