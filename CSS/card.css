@@ -444,8 +444,13 @@ input{
   }
 }
 @media (max-width:430px) {
+ 
   body{
-    height: 150vh;
+    height: 140vh;
+}
+.card-container{
+  margin-top: 11rem; 
+
 }
 .logos{
     padding: 10px;
@@ -457,7 +462,7 @@ input{
     /* padding: 10px; */
 }
 .logo-text{
-    font-size: 12px;
+    font-size: 28px;
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
     color: aliceblue;
@@ -588,7 +593,7 @@ input{
 }
 @media (max-width:360px) {
   body{
-    height: 135vh;
+    height: 150vh;
   }
   .header{
     display: flex;
@@ -603,7 +608,7 @@ input{
     /* padding: 10px; */
 }
 .logo-text{
-    font-size: 8px;
+    font-size: 28px;
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
     color: aliceblue;
