@@ -576,8 +576,8 @@ input{
     #Profile-image{
         width: 100px;
         border-radius: 50%;
-        height: 30px;
-        width: 40px;
+        height: 70px;
+        width: 80px;
     }
     .client-name{
         font-family: "Lato",sans-serif;
