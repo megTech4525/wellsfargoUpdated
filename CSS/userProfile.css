@@ -483,6 +483,7 @@ input{
         position: fixed;
         z-index: 5;
     }
+  
     #Profile-image{
         width: 100px;
         border-radius: 50%;
