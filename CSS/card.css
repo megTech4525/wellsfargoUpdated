@@ -564,7 +564,7 @@ input{
 }
 @media (max-width:390px) {
   body{
-    height: 150vh;
+    height: 170vh;
   }
 }
 @media (max-width:375px) {
@@ -581,14 +581,14 @@ input{
 }
 @media (max-width:360px) {
   body{
-    height: 150vh;
+    height: 170vh;
   }
   .header{
     display: flex;
     justify-content: center;
     gap :90px;
-    position: fixed;
-    z-index: 5;
+    /* position: fixed;
+    z-index: 5; */
 }
 .logo-png{
     width: 30px;
