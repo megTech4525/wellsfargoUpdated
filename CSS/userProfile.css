@@ -435,6 +435,9 @@ input{
         color: blue;
         /* font-size: 13px; */
      }
+     .dashboard-user{
+        margin-top: 10rem;
+     }
     .trans-icon{
         width: 40px;
         background-color: rgb(222, 152, 236);
