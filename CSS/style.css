@@ -467,8 +467,8 @@ input{
     }
     .transaction-history{
         position: relative;
-        left: 1rem;
-        top: -1.5rem;
+        left: 0%;
+        top: -0rem;
         text-decoration: none;
      }
      .transaction-icons{
@@ -480,7 +480,10 @@ input{
         text-decoration: none;
         font-family: "Lato",sans-serif;
         color: blue;
-        /* font-size: 13px; */
+        font-size: 13px;
+     }
+     .dashboard{
+        margin-top: 9rem;  
      }
     .trans-icon{
         width: 40px;
@@ -595,7 +598,7 @@ input{
 }
 @media (max-width:375px) {
    body{
-    height: 160vh;
+    height: 150vh;
    }
     .header{
         display: flex;
