@@ -58,28 +58,27 @@ body{
 }
 @keyframes animate{
     
-   25%{
-       transform: rotate(300deg);
-   }
-    50%{
-        transform: rotate(200deg);
+    25%{
+        transform: rotate(300deg);
     }
-    100%{
-        transform: rotate(100deg);
-    }
-
-}
-#bottom-pics-2{
-    display: none;
-} 
-.main-containers{
+     50%{
+         transform: rotate(200deg);
+     }
+     100%{
+         transform: rotate(100deg);
+     }
+ 
+ }
+ #bottom-pics-2{
+     display: none;
+ } 
+ .main-containers{
     display: grid;
     grid-template-columns: auto auto;
 }
 .header-list {
     margin-bottom: 10px;
 }
-
 .head-link {
     display: block;
     padding: 10px 20px;
@@ -91,7 +90,7 @@ body{
 .head-link i {
     margin-right: 10px;
 }
-#Profile-image{
+ #Profile-image{
     width: 100px;
     border-radius: 50%;
     height: 120px;
@@ -110,7 +109,7 @@ input{
     font-family: "Lato",sans-serif;
 }
 /* Banking Section */
- .transaction-icons{
+.transaction-icons{
     display: flex;
     gap: 50px;
     /* justify-content: center; */
@@ -120,6 +119,11 @@ input{
     background-color: rgb(222, 152, 236);
     padding: 10px;
     border-radius: 10px;
+}
+.intro-space{
+    padding: 15px;
+    display: flex;
+    gap: 10px;
 }
 .addmoney-text, .topUp-text, .addmoney-text1{
     font-family: "Lato", sans-serif;
@@ -134,85 +138,60 @@ input{
     height:90px;
     cursor: pointer;
 }
-
 .transaction-dashboard{
-   margin-top: 10rem; 
-}
- .transaction-dashboard #balance-avatar{
-   width: 50px;
-   height: 50px;
-   display: flex;
-   position: absolute;
-   top: 0px;
-   left: 0px;
- }
-.table-responsive{
-   position: absolute;
-   margin-right: auto;
-   margin-left: auto;
-   display: flex;
-   flex-direction: column; 
-    bottom: -35rem;
-   transform: translate(-10%,0%);
+    margin-top: 8rem; 
  }
  .transaction-dashboard #hello-user{
-   font-family: "Lato",sans-serif;
-   font-size: 20px;
-    font-weight: 400;
-    color: rgb(8, 31, 8);
+    font-family: "Lato",sans-serif;
+    font-size: 20px;
+     font-weight: 400;
+     color: rgb(8, 31, 8);
+  }
+  .balance{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 2px 1px 0px 2px;
+    width: 70%;
+    
  }
- .balance{
-   border: 1px solid transparent;
-   border-radius: 10px;
-   padding: 25px;
-   background-color: white;
-   box-shadow: 2px 1px 0px 2px;
-   width: 70%;
-   z-index: 1;
-   /* position: absolute;
-   top: 50px;
-   margin-right: auto;
-   margin-left: auto; */
-   
-}
-.trans-headers{
-   display: flex;
-}
-
-#transaction-history{
-   position: relative;
-   left: 14rem;
-   top: -1rem;
-   text-decoration: none;
-}
-a, #transaction-history{
-   text-decoration: none;
-   font-family: "Lato",sans-serif;
-   color: blue;
-}
-.trans-head{
-   font-family: "Lato", sans-serif;
-}
-#Total-balance{
-   font-family: "Lato", sans-serif;
-}
-.table-bordered{
-   background-color: aliceblue;
-   width: 600px;
-   border-radius: 25px;
-   /* transform: translate(-10%, 60%); */
-   padding: 20px;
-}
-thead{
-   padding: 25px;
-}
-tbody{
-   line-height: 3rem;
-}
-td, th{
-   font-family: "Lato", sans-serif;
-}
-/* Responsive Design */
+ .trans-headers{
+    display: flex;
+ }
+ #transaction-history{
+    position: relative;
+    left: 14rem;
+    top: -1rem;
+    text-decoration: none;
+ }
+ a, #transaction-history{
+    text-decoration: none;
+    font-family: "Lato",sans-serif;
+    color: blue;
+ }
+ .trans-head{
+    font-family: "Lato", sans-serif;
+ }
+ #Total-balance{
+    font-family: "Lato", sans-serif;
+ }
+ .table-bordered{
+    background-color: aliceblue;
+    width: 70%;
+    border-radius: 25px;
+    padding: 20px;
+ }
+ thead{
+    padding: 25px;
+ }
+ tbody{
+    line-height: 3rem;
+ }
+ td, th{
+    font-family: "Lato", sans-serif;
+ }
+ /* Responsive Design */
 @media (max-width: 1280px) {
     #transaction-history{
         position: relative;
@@ -220,15 +199,6 @@ td, th{
         top: -1rem;
         text-decoration: none;
      }
-     .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -25rem;
-        transform: translate(-12%,0%);
-      }
 }
 @media (max-width:1114px) {
     #transaction-history{
@@ -252,30 +222,13 @@ td, th{
         border-radius: 30px;
         line-height: 2rem;
     }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -32rem;
-        transform: translate(-12%,0%);
-      }
 }
 @media (max-width:884px) {
     body{
        overflow-x: hidden;
-       height: 120vh;
+       height: 140vh;
     }
-    .account-details{
-        border: 1px solid transparent;
-        border-radius: 10px;
-        padding: 35px;
-        background-color: white;
-        width: 85%;
-        /* height: 240px; */
-        margin: auto;
-     }
+   
      .balances{
         display: grid;
         grid-template-columns: auto auto;
@@ -296,10 +249,10 @@ td, th{
         position: relative;
         left: 8.5rem;
     }
-     .transaction-history{
+    #transaction-history{
         position: relative;
-        left: 10rem;
-        top: -1.5rem;
+        left: 16rem;
+        top: -1rem;
         text-decoration: none;
      }
      .main-containers{
@@ -438,16 +391,13 @@ td, th{
         margin-left: auto; */
         
      }
-     .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -10rem;
-        transform: translate(-10%,0%);
-      }
-      
+    
+     .table-bordered{
+        background-color: aliceblue;
+        width: 120%;
+        border-radius: 25px;
+        padding: 20px;
+     } 
 }
 @media (max-width:834px) {
     .header{
@@ -462,53 +412,6 @@ td, th{
         color: black;
         transition: all 0.3s ease;
     }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -6rem;
-        transform: translate(-10%,0%);
-      }
-}
-@media (max-width:800px) {
-    .head-link {
-        display: block;
-        padding: 5px 10px;
-        text-decoration: none;
-        color: black;
-        transition: all 0.3s ease;
-    }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: 3rem;
-        transform: translate(-10%,0%);
-      }
-}
-@media (max-width:768px) {
-    body{
-        height: 140vh;
-    }
-    .account-balance, .current-balance{
-        background-color: white;
-        width: 120%;
-        border-radius: 15px;
-        padding: 30px;
-    }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -15rem;
-        transform: translate(-12%,0%);
-      }
 }
 @media (max-width:430px) {
     *{
@@ -547,7 +450,6 @@ td, th{
     }
     #transaction-history{
         position: relative;
-        left: 1rem;
         top: -1rem;
         text-decoration: none;
      }
@@ -605,13 +507,19 @@ td, th{
     .header-list{
         letter-spacing: 1px;
     }
+    .trans-balances{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .balance{
         border: 1px solid transparent;
         border-radius: 10px;
         padding: 25px;
         background-color: white;
         box-shadow: 2px 1px 0px 2px;
-        width: 100%;
+        width: 90%;
         z-index: 1;
         /* position: absolute;
         top: 50px;
@@ -619,21 +527,14 @@ td, th{
         margin-left: auto; */
         
      }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -42rem;
-        transform: translate(-14%,0%);
-      }
+   
       .table-bordered{
         background-color: aliceblue;
-        width: 100%;
+        width: 75%;
         border-radius: 25px;
         /* transform: translate(-10%, 60%); */
         padding: 20px;
+        margin: auto;
      }
      td, th{
         font-family: "Lato", sans-serif;
@@ -650,194 +551,70 @@ td, th{
         cursor: pointer;
     }
 }
-@media (max-width:414px) {
-    .header{
-        display: flex;
-        justify-content: center;
-        gap :100px;
-        position: fixed;
-        z-index: 5;
+@media (max-width:390px) {
+    *{
+        overflow-x: hidden;
     }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -42rem;
-        transform: translate(-15%,0%);
-      }
-      .table-bordered{
-        background-color: aliceblue;
-        width: 100%;
-        border-radius: 25px;
-        /* transform: translate(-10%, 60%); */
-        padding: 20px;
+    body{
+        overflow: hidden;
+        height: 200vh;
      }
-}
-@media (max-width:393px) {
-    .header{
-        display: flex;
-        justify-content: center;
-        gap :80px;
-        position: fixed;
-        z-index: 5;
-    }
-    .nav-link{
-        margin-top: 10rem;
-        background-color: aliceblue;
-        width: 100%;
-        margin-left: 0.2rem;
-        border-radius: 0px;
-        line-height: 1rem;
-        display: grid;
-        place-content: center;
-        gap: 5px;
-    }
-    .head-link{
-        text-decoration: none;
-        font-family: "Lato";
-        color: rgb(43, 42, 42);
-        font-weight: 700;
-        font-size: 13px;
-        display: block;
-    }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-        bottom: -42rem;
-        transform: translate(-13%,0%);
-      }
+    .transaction-dashboard{
+        margin-top: 6rem; 
+     }
     .table-bordered{
         background-color: aliceblue;
+        width: 75px;
         border-radius: 25px;
         /* transform: translate(-10%, 60%); */
-        padding: 10px;
+        padding: 15px;
+        margin: auto;
      }
 }
-@media (max-width:390px) {
-    body{
-        height: 205vh;
-    }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-        bottom: -45rem;
-        transform: translate(-13%,0%);
-      }
-      .support{
-        position: fixed;
-        right: 0px;
-          top: 570px;
-    }
-    .support img{
-        width: 60px;
-        height:70px;
-        cursor: pointer;
-    }
-}
 @media (max-width:375px) {
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-        bottom: -48rem;
-        transform: translate(-13%,0%);
-      }
-      .support{
-        position: fixed;
-        right: 0px;
-          top: 520px;
+    *{
+        overflow-x: hidden;
     }
-    .support img{
-        width: 60px;
-        height:70px;
-        cursor: pointer;
-    }
+    body{
+        overflow: hidden;
+        height: 190vh;
+     } 
+     .transaction-dashboard{
+        margin-top: 4rem; 
+     }
 }
 @media (max-width:360px) {
     body{
-        height: 215vh;
-    }
-    .header{
-        display: flex;
-        justify-content: center;
-        gap :90px;
-        position: fixed;
-        z-index: 5;
-    }
-    .logo-png{
-        width: 30px;
-        border-radius: 50%;
-        /* padding: 10px; */
-    }
-    .logo-text{
-        font-size: 28px;
-        font-family: "Josefin Sans", sans-serif;
-        text-align: center;
-        color: aliceblue;
-    }
-    #Profile-image{
-        width: 100px;
-        border-radius: 50%;
-        height: 30px;
-        width: 40px;
-    }
-    .client-name{
-        font-family: "Lato",sans-serif;
-        color: aliceblue;
-        font-size: 10px;
-    }
-    .transaction-history{
-        position: relative;
-        left: 2rem;
-        top: -1.5rem;
-        text-decoration: none;
+        overflow: hidden;
+        height: 200vh;
+     } 
+    .transaction-dashboard{
+        margin-top: 4rem; 
      }
-    .addmoney-text, .topUp-text, .addmoney-text1{
+     .table-bordered{
+        background-color: aliceblue;
+        width: 75px;
+        border-radius: 25px;
+        /* transform: translate(-10%, 60%); */
+        padding: 5px;
+        margin: auto;
+     }
+     .addmoney-text, .topUp-text, .addmoney-text1{
         font-family: "Lato", sans-serif;
-        font-size: 10px;
-    }
-    .head-link {
-        display: block;
-        padding: 5px 10px;
-        text-decoration: none;
-        color: black;
-        transition: all 0.3s ease;
-    }
-    .support{
-        position: fixed;
-        right: 0px;
-          top: 500px;
-    }
-    .support img{
-        width: 60px;
-        height:70px;
-        cursor: pointer;
+        font-size: 12px;
     }
 }
 @media (max-width:320px) {
     body{
-        height: 235vh;
+        overflow: hidden;
+        height: 290vh;
     }
-    .transaction-dashboard{
-        margin-top: 8rem; 
+    .table-bordered{
+        background-color: aliceblue;
+        width: 50px;
+        border-radius: 25px;
+        /* transform: translate(-10%, 60%); */
+        padding: 1px;
+        margin: auto;
      }
-    .table-responsive{
-        position: absolute;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column; 
-         bottom: -52rem;
-        transform: translate(-12%,0%);
-      }
 }
