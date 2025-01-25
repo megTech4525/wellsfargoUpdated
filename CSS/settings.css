@@ -154,7 +154,7 @@ input{
   }
   
 .light-mode {
-    background-color: rgb(206, 245, 232);
+    background-color: gainsboro;
     color: black;
   }
   .light-mode .container, 
