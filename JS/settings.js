@@ -8,9 +8,6 @@ securityUpdateDescription.addEventListener('click', () => {
 })
 
 
-
-
-
         // Access the toggle button and the body element
         const toggleButton = document.getElementById('toggle-button');
         const body = document.body;

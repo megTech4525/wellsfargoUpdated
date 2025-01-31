@@ -39,7 +39,7 @@
                                 <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
                             </label>
                             <div class="img-text">
-                                <h3 class="client-name">Alexander Joshua</h3>
+                                <h3 class="client-name" id="client-id"></h3>
                             </div>
                         </div><br>
                 <li class="header-list">
@@ -145,8 +145,25 @@
     </div> 
     <script type="module" src="./JS/index.js"></script>
     <script type="module" src="./JS/settings.js"></script>
+       
     <script>
-        
+          document.addEventListener('DOMContentLoaded', function() {
+    var firstName = localStorage.getItem('firstName');
+    var lastName = localStorage.getItem('lastName');
+
+    if (firstName && lastName) {
+        document.getElementById('client-id').textContent = firstName + ' ' + lastName;
+    } else {
+        document.getElementById('client-id').textContent = 'No user data found.';
+    }
+    
+    // 
+    if (firstName) {
+        document.getElementById('user-name').textContent = firstName;
+    } else {
+        document.getElementById('user-name').textContent = 'No user data found.';
+    }
+});
     </script>
 
 

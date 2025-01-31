@@ -31,7 +31,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 4;
-    padding: 10px;
+    padding: 20px;
 }
 .nav-link{
     margin-top: 10rem;
@@ -327,7 +327,7 @@ input{
       position: absolute;
       top: 0;
       z-index: 2;
-      padding: 10px;
+      padding: 20px;
   }
  
   .nav-link{

@@ -24,13 +24,12 @@ body{
     color: aliceblue;
 }
 .header{
-    background-color:  rgb(29, 38, 67);
-    border: 1px solid;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 4;
-    padding: 10px;
+    background-color: #002244;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  padding: 20px;
 }
 .nav-link{
     margin-top: 10rem;
@@ -366,8 +365,7 @@ hr{
     flex-direction: column-reverse;
   }
   .header{
-      background-color:  rgb(29, 38, 67);
-      border: 1px solid;
+    background-color: #002244;
       width: 100%;
       position: absolute;
       top: 0;
@@ -687,6 +685,12 @@ hr{
   body{
     height: 185vh;
   }
+  .logo-text{
+    font-size: 22px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    color: aliceblue;
+}
   .client-name{
     font-family: "Lato",sans-serif;
     color: aliceblue;

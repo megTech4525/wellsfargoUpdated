@@ -4,240 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foreign Bank Registration & Login</title>
+    <link rel="stylesheet" href="CSS/Register.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-       @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        .header{
-         background-color:  rgb(29, 38, 67);
-         border: 1px solid;
-          width: 100%;
-          position: fixed;
-         top: 0;
-         z-index: 4;
-         padding: 10px;
-}
- .logo-text{
-      font-size: 28px;
-      font-family: "Josefin Sans", sans-serif;
-      text-align: center;
-      color: aliceblue;
-}
-        .form-container {
-            margin-right: auto;
-            margin-left: auto;
-            position: relative;
-            top: 120px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 400px;
-            padding: 20px;
-        }
-        h2 {
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input {
-            width: 90%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        #phone{
-            width: 360px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .toggle-link {
-            text-align: center;
-            margin-top: 15px;
-            color: #007bff;
-            cursor: pointer;
-        }
-        .hidden {
-            display: none;
-        }
-
-        /* Responsive Designs */
-        @media (max-width:430px) {
-            *{
-               overflow-x: hidden;
-             }
-             .logo-text{
-              font-size: 28px;
-             font-family: "Josefin Sans", sans-serif;
-             text-align: center;
-             color: aliceblue;
-    }
-        .header{
-        position: fixed;
-        z-index: 5;
-      }
-      button {
-            width: 70%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-left: 2.5rem;
-        }
-        }
-        @media (max-width:414px) {
-            input {
-            width: 80%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        #phone{
-            width: 250px;
-        }
-        button {
-            width: 70%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-left: 2.5rem;
-        }
-        }
-        @media (max-width:393px) {
-             input {
-            width: 70%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        
-        #phone{
-            width: 280px;
-        }
-        button {
-            width: 70%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-left: 2rem;
-        }
-        }
-        @media (max-width:360px) {
-            *{
-              overflow-x: hidden;
-            }
-            .logo-text{
-            font-size: 28px;
-            font-family: "Josefin Sans", sans-serif;
-            text-align: center;
-            color: aliceblue;
-    }
-        .header{
-        position: fixed;
-        z-index: 5;
-      }
-            input {
-            width: 60%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        
-        #phone{
-            width: 260px;
-        }
-        button {
-            width: 60%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-left: 2.5rem;
-        }
-        .toggle-link {
-            text-align: center;
-            padding-right: 4rem;
-            margin-top: 15px;
-            color: #007bff;
-            cursor: pointer;
-        }
-        }
-        @media (max-width:320px) {
-            input {
-            width: 60%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        
-        #phone{
-            width: 230px;
-        }
-        button {
-            width: 40%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-left: 2.5rem;
-        }
-        .toggle-link {
-            text-align: center;
-            padding-right: 9rem;
-            margin-top: 15px;
-            color: #007bff;
-            cursor: pointer;
-        }
-        }
-    </style>
 </head>
 <body>
     
         <div class="container">
-            <!-- BANK NAME EMBEDED IN THE HEADER DIV -->
+               <!-- BANK NAME EMBEDED IN THE HEADER DIV -->
     
-            <div class="header">
+               <div class="header">
                 <div class="logos">
                  <!-- <img class="logo-png" src="./IMG/F.png" alt=""> -->
                  <h1 class="logo-text">WellsFargo Banking</h1>
@@ -246,12 +22,16 @@
 
             <div class="form-container">        
         <!-- Registration Form -->
-        <form  id="registrationForm"  method="POST" class="form" action="http://localhost/test.php">
+        <form  id="registrationForm"  method="POST" class="form">
             
             <h2 style="text-align: center;">Register</h2>
             <div class="form-group">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
+                <label for="fName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -293,7 +73,7 @@
             <div class="form-group">
                 <label for="Occupation">Occupation:</label>
                 <input type="text" id="occupation" name="occupation" required>
-            </div>
+            </div><br>
             <button type="submit" onclick="signIn(event)">Register</button>
         </form>
 
@@ -308,7 +88,7 @@
             <div class="form-group">
                 <label for="loginPassword">Password:</label>
                 <input type="password" id="loginPassword" name="loginPassword" required>
-            </div>
+            </div><br>
 
             
             <button type="submit" onclick="loginUser(event)">Login</button>
@@ -316,6 +96,8 @@
 
         <div class="toggle-link" id="toggleLink">Already have an account? Login</div>
     </div>
+        </div>
+         
 
     <script>
         const registrationForm = document.getElementById('registrationForm');
@@ -360,35 +142,47 @@
     });
 
     function signIn(event) {
-            // Prevent the default form submission behavior
-            event.preventDefault();
+    // Prevent the default form submission behavior
+    event.preventDefault();
 
-            // Get form data (you can validate or process this data here)
-            const fullName = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            const address = document.getElementById('Address').value;
-            const postalCode = document.getElementById('Postal Code').value;
-            const occupation = document.getElementById('occupation').value;
+    // Get form data
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const address = document.getElementById('Address').value;
+    const postalCode = document.getElementById('Postal Code').value;
+    const occupation = document.getElementById('occupation').value;
 
-            // Simple validation (can be expanded)
-            if (fullName && email && phone && password && confirmPassword && address && postalCode && occupation) {
-                // Check if password and confirm password match
-                if (password === confirmPassword) {
-                    // If validation passes, submit the form (you can submit data to the server via AJAX here if needed)
-                    // For now, we simply redirect the user after form submission
+    // Simple validation
+    if (firstName && lastName && email && phone && password && confirmPassword && address && postalCode && occupation) {
+        // Check if password and confirm password match
+        if (password === confirmPassword) {
+            // Save data to localStorage
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('lastName', lastName);
+            localStorage.setItem('email', email);
+            localStorage.setItem('phone', phone);
+            localStorage.setItem('address', address);
+            localStorage.setItem('postalCode', postalCode);
+            localStorage.setItem('occupation', occupation);
 
-                    // Normally you would submit the form here, but we're redirecting
-                    window.location.href = './home.html';  // Change this URL if necessary (e.g., 'index.php' or '/')
-                } else {
-                    alert('Passwords do not match.');
-                }
-            } else {
-                alert('Please fill in all fields.');
-            }
+            // Redirect the user to the user profile page after a slight delay
+            setTimeout(function() {
+                window.location.href = './userprofile.html';  // Ensure this path is correct
+            }, 100); // Adjust the delay if needed
+        } else {
+            alert('Passwords do not match.');
         }
+    } else {
+        alert('Please fill in all fields.');
+    }
+}
+
+
+
         // Log in Validation
         function loginUser(event) {
             // Prevent the default form submission behavior
@@ -409,6 +203,7 @@
                 alert('Please enter both email and password.');
             }
         }
+
     </script>
 </body>
 </html>

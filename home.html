@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WELLS FARGO(Home)</title>
     <link rel="stylesheet" href="./CSS/style.css" type="text/css">
-    <!-- <link rel="stylesheet" href="./CSS/transaction.css" type="text/css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==
     " crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,18 +13,10 @@
 <body>
     <div class="header">
        <div class="logos">
-        <img class="logo-png" src="./IMG/F.png" alt="">
+        <!-- <img class="logo-png" src="./IMG/F.png" alt=""> -->
         <h1 class="logo-text">WellsFargo Banking</h1>
        </div>
-        <!-- <div class="img" id="bottom-pics-2">
-            <label for="upload">
-                <img src="./IMG/user-PROFILE.png" alt="click to upload" id="Profile-image" class="class-pics">
-                <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
-            </label>
-            <div class="img-text">
-                <h3 class="client-name">Alexander Joshua</h3>
-            </div>
-        </div> -->
+       
     </div>
     <div class="main-containers">
         <header>
@@ -39,7 +29,7 @@
                                 <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
                             </label>
                             <div class="img-text">
-                                <h3 class="client-name">Alexander Joshua</h3>
+                                <h3 class="client-name" id="client-id"></h3>
                             </div>
                         </div><br>
                 <li class="header-list">
@@ -75,6 +65,13 @@
        
         <!-- Main Section -->
          <section class="bank-section">
+            <div class="intro-space">
+                <label for="upload">
+                 <img src="./IMG/user-PROFILE.png" alt="click to upload" id="Profile-image2" >
+                 <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
+                </label>
+            <span id="hello-user">Hello, <span id="user-name"></span></span>
+              </div>
             <div class="dashboard">
                 <div class="account-description">
                     <div class="account-details">
@@ -89,10 +86,7 @@
                     <h3 class="acct-head">Account Number</h3>
                     <span id="account-number">3026354706</span><br><br>
     
-                    <!-- <span id="routing-number">
-                        <h3>Routing Number</h3>
-                        <span id="routing-id">12364726</span>
-                    </span> -->
+                    
                     
     
                     
@@ -189,6 +183,33 @@
         })
     </script>
      -->
+     <script>
+        // // Check if the first name is saved in localStorage
+        // const storedFirstName = localStorage.getItem('firstName');
+    
+        // if (storedFirstName) {
+        //     // Replace the text inside #user-name with the first name from localStorage
+        //     document.getElementById('user-name').textContent = storedFirstName;
+        // }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    var firstName = localStorage.getItem('firstName');
+    var lastName = localStorage.getItem('lastName');
+
+    if (firstName && lastName) {
+        document.getElementById('client-id').textContent = firstName + ' ' + lastName;
+    } else {
+        document.getElementById('client-id').textContent = 'No user data found.';
+    }
+    
+    // 
+    if (firstName) {
+        document.getElementById('user-name').textContent = firstName;
+    } else {
+        document.getElementById('user-name').textContent = 'No user data found.';
+    }
+});
+    </script>
 </body>
 
 </html>

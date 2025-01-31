@@ -35,11 +35,11 @@
                     <div class="sidecontainer">
                         <div class="img"  id="bottom-pics">
                             <label for="upload">
-                                <img src="./IMG/profile-avatar.png" alt="click to upload" id="Profile-image">
+                                <img src="./IMG/profile-avatar.png" alt="click to upload" id="Profile-image2">
                                 <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
                             </label>
                             <div class="img-text">
-                                <h3 class="client-name">Alexander Joshua</h3>
+                                <h3 class="client-name" id="client-id"></h3>
                             </div>
                         </div><br>
                 <li class="header-list">
@@ -77,50 +77,45 @@
             <div class="dashboard-user">
                 <div class="user-description">
                     <div class="img">
+                        <div class="Edit">
+                            <span id="Edit">Edit details</a>
+                        </div>
                         <label for="upload">
                             <img src="./IMG/user-PROFILE (1).png" alt="click to upload" id="Profile-image">
                             <input type="file" accept="image/jpeg, image/jpg, image/png" id="upload">
-                        </label>
+                        </label><br>
                         <div class="img-text">
-                            <h3 class="client-name">Alexander Joshua</h3>
+                            <h3 class="client-name" id="client-id2"></h3>
                         </div>
                     </div>
         
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Full Name:</td>
-                            <td id="fullName"></td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Email:</td>
-                            <td id="email"></td>
-                        </tr>
-                        <tr>
-                            <td>Account Number:</td>
-                            <td id="account-number"></td>
-                        </tr>
-                        <tr>
-                            <td>Occupation:</td>
-                            <td id="occupation"></td>
-                        </tr>
-        
-                        <tr>
-                            <td>Address:</td>
-                            <td id="address"></td>
-                        </tr>
-        
-                        <tr>
-                            <td>Phone(+1):</td>
-                            <td id="phone"></td>
-                        </tr>
-        
-                        <tr>
-                            <td>Email:</td>
-                            <td id="email"></td>
-                        </tr>
-                    </tbody>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Full Name:</td>
+                                <td id="fullName"></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td id="email"></td>
+                            </tr>
+                            <tr>
+                                <td>Phone(+1):</td>
+                                <td id="phone"></td>
+                            </tr>
+                            <tr>
+                                <td>Occupation:</td>
+                                <td id="occupation"></td>
+                            </tr>
+                            <tr>
+                                <td>Address:</td>
+                                <td id="address"></td>
+                            </tr>
+                            <tr>
+                                <td>Postal Code:</td>
+                                <td id="postalCode"></td>
+                            </tr>
+                        </tbody>
                     </table>
                 <!-- <span id="account-number">3526384726</span> -->
         <!-- 
@@ -128,9 +123,6 @@
                     <h3>Routing Number</h3>
                     <span id="routing-id">12364726</span>
                 </span> -->
-                <div class="Edit">
-                    <span id="Edit">Edit details</a>
-                </div>
             </div>
         
             <div class="support">
@@ -151,6 +143,67 @@
         })
     </script>
      -->
+     <script>
+        // Retrieve data from localStorage
+        const userData = JSON.parse(localStorage.getItem('userData'));
+    
+        if (userData) {
+            // Populate table with user data
+            document.getElementById('fullName').textContent = userData.fullName;
+            document.getElementById('email').textContent = userData.email;
+            document.getElementById('phone').textContent = userData.phone;
+            document.getElementById('occupation').textContent = userData.occupation;
+            document.getElementById('address').textContent = userData.address;
+            document.getElementById('postalCode').textContent = userData.postalCode;
+        } else {
+            // Handle case if no data is found
+            // alert('No user data found!');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+    var firstName = localStorage.getItem('firstName');
+    var lastName = localStorage.getItem('lastName');
+
+    if (firstName && lastName) {
+        document.getElementById('client-id').textContent = firstName + ' ' + lastName;
+    } else {
+        document.getElementById('client-id').textContent = 'No user data found.';
+    }
+
+    // 
+    if (firstName && lastName) {
+        document.getElementById('client-id2').textContent = firstName + ' ' + lastName;
+    } else {
+        document.getElementById('client-id2').textContent = 'No user data found.';
+    }
+    
+    // 
+    if (firstName) {
+        document.getElementById('user-name').textContent = firstName;
+    } else {
+        document.getElementById('user-name').textContent = 'No user data found.';
+    }
+});
+
+window.onload = function() {
+    // Get user data from localStorage
+    const firstName = localStorage.getItem('firstName');
+    const lastName = localStorage.getItem('lastName');
+    const email = localStorage.getItem('email');
+    const phone = localStorage.getItem('phone');
+    const address = localStorage.getItem('address');
+    const postalCode = localStorage.getItem('postalCode');
+    const occupation = localStorage.getItem('occupation');
+
+    // Display data in the profile table
+    document.getElementById('fullName').textContent = firstName + ' ' + lastName;
+    document.getElementById('email').textContent = email;
+    document.getElementById('phone').textContent = phone;
+    document.getElementById('occupation').textContent = occupation;
+    document.getElementById('address').textContent = address;
+    document.getElementById('postalCode').textContent = postalCode;
+};
+
+    </script>
 </body>
 
 </html>
