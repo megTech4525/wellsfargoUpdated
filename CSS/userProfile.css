@@ -178,11 +178,13 @@ input{
    align-self: flex-end;
    font-family: "Lato", sans-serif;
    background-color: #2038a3;
-   color: rgb(250, 250, 250);
    padding: 5px 10px;
    border-radius: 10px;
 }
-
+#Edit{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
 .Edit #Edit:hover{
    cursor: pointer;
 }
@@ -483,6 +485,13 @@ input{
     .client-name{
         font-family: "Lato",sans-serif;
     }
+    tr{
+        display: flex;
+        gap: 15px;
+    }
+    td{
+        font-size: 13px;
+    }
     .support{
         position: fixed;
         right: 0px;
@@ -637,6 +646,16 @@ input{
         color: blue;
         font-size: 13px;
      }
+     tr{
+        display: flex;
+        gap: 10px;
+    }
+    #address{
+        font-size: 10px;
+    }
+    td{
+        font-size: 12px;
+    }
      .support{
         position: fixed;
         right: 0px;
