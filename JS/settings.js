@@ -4,7 +4,7 @@ securityUpdateDescription.addEventListener('click', () => {
     if (confirm == 0) {
         alert("ok")
     }
-    window.location.href = './Register.html'
+    window.location.href = 'index.html'
 })
 
 

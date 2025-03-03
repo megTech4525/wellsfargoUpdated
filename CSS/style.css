@@ -115,6 +115,10 @@ input{
     flex-direction: column;
     padding: 15px;
 }
+.img-text{
+    display: flex;
+    gap: 15px;
+}
 .client-name{
     font-family: "Lato",sans-serif;
 }
@@ -194,7 +198,29 @@ input{
 }
 .balance-head{
     font-family: "Lato", sans-serif;
+    font-size: 16px;
     color: #797676;
+}
+.detail-icon{
+    font-size: 22px;
+}
+.detail-icon1{
+    font-size: 28px;
+    color: green;
+    position: relative;
+     bottom: 10px;
+}
+.detail-icon2{
+    font-size: 28px;
+    color: rgb(204, 204, 30);
+    position: relative;
+     bottom: 10px;
+}
+.detail-icon3{
+    font-size: 28px;
+    color: red;
+    position: relative;
+     bottom: 10px;
 }
 #available-balance, #current-balance{
     display: grid;
@@ -511,7 +537,11 @@ input{
         color: blue;
         font-size: 13px;
      }
-    
+     .balance-head{
+        font-family: "Lato", sans-serif;
+        color: #797676;
+        text-align: left;
+    }
     .trans-icon{
         width: 40px;
         background-color: rgb(222, 152, 236);

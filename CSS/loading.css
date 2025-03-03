@@ -44,7 +44,7 @@ label{
     margin-top: 10px;
 }
 
-.submit-button{
+/* .submit-button{
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,49 @@ label{
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+} */
+/* Initial button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
 }
+
+/* Spinner visibility and centering */
+.submit-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#submitButton{
+    /* background-color: #2110c0;
+    color: aliceblue; */
+}
+button i {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Processing state */
+button.processing {
+    background-color: #2110c0;
+    color: aliceblue;
+    cursor: not-allowed;
+}
+
+button.processing #buttonText {
+    visibility: hidden; /* Hide the text */
+}
+
+button.processing #loadingSpinner {
+    display: inline-block; /* Show the spinner */
+    /* color: aliceblue; */
+}
+
 /* Responsive Designs */
 @media (max-width:1280px) {
     .funds-input{

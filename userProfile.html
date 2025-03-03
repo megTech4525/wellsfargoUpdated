@@ -78,7 +78,7 @@
                 <div class="user-description">
                     <div class="img">
                         <div class="Edit">
-                                <a id="Edit" href="Register.html">Edit details</a>
+                                <a id="Edit" href="index.html">Edit details</a>
                         </div>
                         <label for="upload">
                             <img src="./IMG/user-PROFILE (1).png" alt="click to upload" id="Profile-image">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
         
-                    <table>
+                    <table id="userProfileDiv">
                         <tbody>
                             <tr>
                                 <td>Full Name:</td>
@@ -103,10 +103,7 @@
                                 <td>Phone(+1):</td>
                                 <td id="phone"></td>
                             </tr>
-                            <tr>
-                                <td>Occupation:</td>
-                                <td id="occupation"></td>
-                            </tr>
+                            
                             <tr>
                                 <td>Address:</td>
                                 <td id="address"></td>
@@ -144,66 +141,65 @@
     </script>
      -->
      <script>
-        // Retrieve data from localStorage
-        const userData = JSON.parse(localStorage.getItem('userData'));
-    
-        if (userData) {
-            // Populate table with user data
-            document.getElementById('fullName').textContent = userData.fullName;
-            document.getElementById('email').textContent = userData.email;
-            document.getElementById('phone').textContent = userData.phone;
-            document.getElementById('occupation').textContent = userData.occupation;
-            document.getElementById('address').textContent = userData.address;
-            document.getElementById('postalCode').textContent = userData.postalCode;
-        } else {
-            // Handle case if no data is found
-            // alert('No user data found!');
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-    var firstName = localStorage.getItem('firstName');
-    var lastName = localStorage.getItem('lastName');
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
-    if (firstName && lastName) {
-        document.getElementById('client-id').textContent = firstName + ' ' + lastName;
-    } else {
-        document.getElementById('client-id').textContent = 'No user data found.';
-    }
-
-    // 
-    if (firstName && lastName) {
-        document.getElementById('client-id2').textContent = firstName + ' ' + lastName;
-    } else {
-        document.getElementById('client-id2').textContent = 'No user data found.';
-    }
-    
-    // 
-    if (firstName) {
-        document.getElementById('user-name').textContent = firstName;
-    } else {
-        document.getElementById('user-name').textContent = 'No user data found.';
-    }
-});
-
-window.onload = function() {
-    // Get user data from localStorage
-    const firstName = localStorage.getItem('firstName');
-    const lastName = localStorage.getItem('lastName');
-    const email = localStorage.getItem('email');
-    const phone = localStorage.getItem('phone');
-    const address = localStorage.getItem('address');
-    const postalCode = localStorage.getItem('postalCode');
-    const occupation = localStorage.getItem('occupation');
-
-    // Display data in the profile table
-    document.getElementById('fullName').textContent = firstName + ' ' + lastName;
-    document.getElementById('email').textContent = email;
-    document.getElementById('phone').textContent = phone;
-    document.getElementById('occupation').textContent = occupation;
-    document.getElementById('address').textContent = address;
-    document.getElementById('postalCode').textContent = postalCode;
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCj2R-rkYViWqghPkIKy7qk0nKQTEk9UMo",
+    authDomain: "login-form-e0f85.firebaseapp.com",
+    projectId: "login-form-e0f85",
+    storageBucket: "login-form-e0f85.firebasestorage.app",
+    messagingSenderId: "553640742535",
+    appId: "1:553640742535:web:4b8d0f645870bdf1feb222"
 };
 
-    </script>
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore();
+
+// Get the user UID from localStorage (this assumes the user is logged in)
+const userId = localStorage.getItem('loggedInUserId');
+
+if (userId) {
+    // Fetch the user data from Firestore
+    const docRef = doc(db, "users", userId);
+    getDoc(docRef)
+        .then((docSnapshot) => {
+            if (docSnapshot.exists()) {
+                const userData = docSnapshot.data();
+                displayUserProfile(userData);
+            } else {
+                console.log("No user data found!");
+                document.getElementById('userProfileDiv').innerHTML = "No user data found.";
+            }
+        })
+        .catch((error) => {
+            console.error("Error fetching user data: ", error);
+            document.getElementById('userProfileDiv').innerHTML = "Error loading profile data.";
+        });
+} else {
+    // If the user is not logged in, show a message
+    document.getElementById('userProfileDiv').innerHTML = "Please log in to view your profile.";
+}
+
+// Function to display the user profile data in the div
+function displayUserProfile(userData) {
+    const userProfileDiv = document.getElementById('userProfileDiv');
+    const profileHTML = `
+        <h2>Welcome, ${userData.firstName} ${userData.lastName}</h2>
+        <p><strong>Email:</strong> ${userData.email}</p>
+        <p><strong>Phone Number:</strong> ${userData.mobileNumber}</p>
+        <p><strong>Address:</strong> ${userData.address}</p>
+        <p><strong>Postal Code:</strong> ${userData.postalCode}</p>
+    `;
+    userProfileDiv.innerHTML = profileHTML;
+}
+
+     </script>
+      
 </body>
 
 </html>

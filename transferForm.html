@@ -140,6 +140,52 @@
 
     </div>
 
+    <div id="transactionSlipContainer" class="hiddens">
+        <div id="transactionSlip">
+            <h2>Transaction Receipt</h2><span id="close">X</span>
+            <h1>WellsFargo</h1>
+            <p><strong>Transaction ID:</strong> <span id="transId"></span></p>
+            <p><strong>Date:</strong> <span id="transDate"></span></p>
+            <p><strong>Amount:</strong> <span id="transAmount"></span></p>
+            <p><strong>Recipient:</strong> <span id="transRecipient"></span></p>
+            <p><strong>Country:</strong> <span id="transCountry"></span></p>
+            <p><strong>Account:</strong> <span id="transAccount"></span></p>
+            <p><strong>Purpose:</strong> <span id="transPurpose"></span></p>
+            <p><strong>Status:</strong> <span id="transStatus"></span></p>
+            <button id="print">Share Receipt</button>
+            <button id="download">Download Receipt</button>
+        </div>
+    </div>
+
+    <!-- Success pop up -->
+
+    <div id ="confirmTransaction">
+
+        <i class="fa fa-check-circle detail-icon"></i>
+        <h1 id="confirm-message">Transaction Successful</h1>
+        <div class="confirm-actions">
+            <button id="viewReceipt">View Receipt</button>
+        
+    
+    </div>
+    </div>
+
+    <div id ="declineTransaction">
+
+        
+        <img src="../IMG/sad emoji.png" height="60px" width="60px"> <span id="close-insufficient">X</span>
+        <h1 id="confirm-message">Transaction Declined</h1>
+        <div class="confirm-actions">
+            <button id="insuficientFunds">Insufficient Balance</button>
+        
+    
+    </div>
+    </div>
+
+    <div id ="Loading">
+        
+    </div>
+
     <!-- <div id="transactionHistorys">
         <table>
             <tr id="transactionHistory"></tr>

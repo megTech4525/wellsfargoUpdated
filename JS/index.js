@@ -2,6 +2,7 @@ const imageInput = document.getElementById("upload");
 const imageDisplay = document.getElementById("Profile-image");
 const imageDisplay2 = document.getElementById("Profile-image2");  // Reference to the second image
 let loadedFunds = document.getElementById("available-balance");
+let acctNumber = document.getElementById("account-number");
 let currentFunds = document.getElementById("current-balance");
 const ledgerBalanceDisplay = document.getElementById('Total-balance');
 
