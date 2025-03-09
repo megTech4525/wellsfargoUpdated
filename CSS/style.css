@@ -611,6 +611,8 @@ input{
         height:70px;
         cursor: pointer;
     }
+
+    
 }
 @media (max-width:393px) {
     .header{

@@ -32,7 +32,7 @@ body{
     z-index: 4;
     padding: 20px;
 }
-.nav-link{
+.nav-link1{
     margin-top: 10rem;
     background-color: aliceblue;
     width: 100%;
@@ -72,7 +72,7 @@ body{
  #bottom-pics-2{
      display: none;
  } 
- .main-containers{
+ .main-containers1{
     /* display: grid;
     grid-template-columns: auto auto; */
     display: flex;
@@ -196,6 +196,10 @@ input{
  tbody{
     line-height: 3rem;
  }
+
+ tbody td{
+    width: 20%;
+ }
  td, th{
     font-family: "Lato", sans-serif;
  }
@@ -230,7 +234,7 @@ input{
         height: 100px;
         width: 100px;
     }
-    .nav-link{
+    .nav-link1{
         margin-top: 10rem;
         background-color: aliceblue;
         width: 100%;
@@ -277,7 +281,7 @@ input{
         position: relative;
         left: 8.5rem;
     }
-     .main-containers{
+     .main-containers1{
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
@@ -299,7 +303,7 @@ input{
         z-index: 5;
     }
    
-    .nav-link{
+    .nav-link1{
         margin-top: 10rem;
         background-color: aliceblue;
         width: 100%;
@@ -521,7 +525,7 @@ input{
         position: relative;
         left: 3.5rem;
     }
-    .nav-link{
+    .nav-link1{
         margin-top: 10rem;
         background-color: aliceblue;
         width: 100%;
@@ -570,6 +574,9 @@ input{
         font-family: "Lato", sans-serif;
         font-size: 14px;
      }
+     tbody td{
+        width: 20%;
+     }
      /* #transactionHistory td {
         border: 1px solid #ddd;
         background-color: white;
@@ -578,9 +585,7 @@ input{
         border-radius: 10px;
         padding: 5px 10px;
      } */
-      tr, #recent-head{
-          
-    }
+      
      .support{
         position: fixed;
         right: 0px;
@@ -742,11 +747,14 @@ input{
     }
      .table-bordered{
         background-color: aliceblue;
-        width: 75px;
+        width: 100%;
         border-radius: 25px;
         /* transform: translate(-10%, 60%); */
         padding: 5px;
         margin: auto;
+     }
+     tbody td{
+        width: 18%;
      }
      .addmoney-text, .topUp-text, .addmoney-text1{
         font-family: "Lato", sans-serif;
@@ -773,7 +781,7 @@ input{
         text-align: center;
         color: aliceblue;
     }
-    .nav-link{
+    .nav-link1{
         margin-top: 10rem;
         background-color: aliceblue;
         width: 100%;
@@ -784,7 +792,7 @@ input{
         place-content: center;
         gap: 10px;
     }
-    .head-link{
+    .head-link1{
         text-decoration: none;
         font-family: "Lato";
         color: rgb(43, 42, 42);

@@ -1,11 +1,3 @@
-const securityUpdateDescription = document.getElementById("securityUpdateDescription-logout")
-securityUpdateDescription.addEventListener('click', () => {
-    confirm('Are you sure you want to logout?')
-    if (confirm == 0) {
-        alert("ok")
-    }
-    window.location.href = 'index.html'
-})
 
 
         // Access the toggle button and the body element
@@ -43,6 +35,14 @@ securityUpdateDescription.addEventListener('click', () => {
     const confirmNo = document.getElementById('confirm-no');
     const logout = document.getElementById('securityUpdateDescription-logout')
 
+    const securityUpdateDescription = document.getElementById("securityUpdateDescription-logout")
+securityUpdateDescription.addEventListener('click', () => {
+    confirm('Are you sure you want to logout?')
+    if (confirm == 0) {
+        alert("ok")
+    }
+    window.location.href = 'index.html'
+})
 
 
 

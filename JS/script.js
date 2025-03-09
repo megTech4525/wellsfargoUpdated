@@ -27,7 +27,7 @@ closeReceipt.addEventListener('click', () => {
     transactionSlipContainer.style.display = 'none'
     if (transactionSlipContainer) {
         transactionAmount == ''
-        window.location.href = '../HTML/Transaction.html'
+        window.location.href = './Transaction.html'
     }
 });
 
@@ -35,7 +35,7 @@ closeinsufficient.addEventListener('click', () => {
     declinePage.style.display = 'none'
     if (declinePage) {
         transactionAmount == ''
-        window.location.href = '../HTML/Transaction.html'
+        window.location.href = './Transaction.html'
     }
 });
 

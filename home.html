@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WELLS FARGO(Home)</title>
     <link rel="stylesheet" href="./CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/settings.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==
     " crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -175,22 +176,25 @@
         </div>
          </section>
     </div> 
+
+
+    <script type="module" src="./JS/settings.js"></script>
     <script type="module" src="./JS/loadFunds.js"></script>
-    <!-- <script type="module" src="./JS/script.js"></script> -->
+    <script type="module" src="./JS/script.js"></script>
     <script type="module" src="./JS/transaction.js"></script>
     <script type="module" src="./JS/index.js"></script>
-    <script type="module" src="./JS/settings.js"></script>
 
 
     <!-- <script>
-        document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    setTheme(savedTheme);
-        })
+       
     </script>
      -->
    <script>
-      // Get the account number from localStorage
+    //  document.addEventListener("DOMContentLoaded", () => {
+    // const savedTheme = localStorage.getItem("theme")
+    // setTheme(savedTheme);
+    //     })
+    //   // Get the account number from localStorage
   const savedAccountNumber = localStorage.getItem("account-number");
 
   // If an account number exists in localStorage, display it in the span

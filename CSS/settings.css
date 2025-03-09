@@ -24,7 +24,7 @@ body{
     color: aliceblue;
 }
 .header{
-    background-color: #002244;
+  background-color: #002244;
   width: 100%;
   position: fixed;
   top: 0;
@@ -34,12 +34,14 @@ body{
 .nav-link{
     margin-top: 10rem;
     background-color: aliceblue;
-    width: 60%;
+    width: 100%;
     /* padding: 40px; */
     margin-left: 2rem;
     border-radius: 30px;
     line-height: 2rem;
 }
+
+
 .header-list{
     letter-spacing: 3px;
 }
@@ -101,7 +103,7 @@ body{
     height: 120px;
     width: 130px;
 }
-input{
+.sidecontainer input{
     display: none;
 }
 .img{
@@ -203,12 +205,160 @@ input{
     color: white;
             
   }
-  .dark-mode .header, 
+  .dark-mode header, 
 .dark-mode .sidecontainer {
 background-color: #1e1e1e;
 color: blue;
           
 }
+
+
+.dark-mode .main-containers{
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  
+   
+}
+.dark-mode .user-description{
+  background-color: #1e1e1e;
+  color: white;
+  border-color: gray;
+   
+}
+
+.dark-mode  .fa {
+  color: white;
+}
+
+.dark-mode .head-link{
+  color: white;
+}
+
+.dark-mode .form-body{
+  background-color: black;
+  color: white;
+}
+
+/* .dark-mode #localTransferForm input{
+  color: red;
+  position: relative;
+} */
+
+
+
+.dark-mode .completed-transaction,
+.dark-mode .pending-transaction,
+.dark-mode .failed-transaction
+{
+background-color: #1e1e1e;
+color: white;
+
+           
+}
+
+.dark-mode .table-bordered{
+  background-color: #000;
+  color: #fff;
+}
+
+
+.dark-mode .balance{
+  background-color: #000;
+  color: #fff;
+}
+
+
+.dark-mode .main-containers1{
+  background-color: #000;
+  color: #fff;
+  border: 1px solid gray;
+  border-radius: 10px;
+  
+}
+
+.dark-mode .account-balance,
+.dark-mode .current-balance{
+background-color: #1e1e1e;
+color: white;
+border: 1px solid gray;
+}
+
+.dark-mode .account-description
+{
+background-color: #1e1e1e;
+color: white;
+          
+}
+
+.dark-mode .account-details
+{
+background-color: #1e1e1e;
+color: white;
+border: 1px solid gray;
+}
+
+
+/* .dark-mode .sidecontainer{
+  border-color: #fff;
+  
+} */
+
+.dark-mode .main-containers header {
+background-color: #1e1e1e;
+color: blue;
+        
+}
+
+.dark-mode .main-containers1 header {
+  background-color: #1e1e1e;
+  color: blue;
+          
+  }
+  
+/* .dark-mode .logout button {
+border-color: #fff;
+background-color: #c82333;
+} */
+
+
+.dark-mode #transactionSlip{
+color: black;
+}
+
+.dark-mode #confirmTransaction{
+color: black;
+}
+
+.dark-mode #declineTransaction{
+color: black;
+}
+
+.dark-mode #Loading{
+color: black;
+}
+
+
+.dark-mode .cardName{
+background-color: #1e1e1e;
+color: white;
+            
+ }
+.dark-mode .CardPagecontainer{
+background-color: #1e1e1e;
+color: white;
+            
+ }
+
+ .dark-mode .container
+ {
+ background-color: #1e1e1e;
+ color: white;
+ border: 1px solid gray;
+             
+  }
+
 
 
 .security{
